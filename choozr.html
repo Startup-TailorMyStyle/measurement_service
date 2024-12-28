@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Page</title>
+</head>
+<body>
+    <h1>Welcome to My Basic HTML Page</h1>
+    <p>This is a simple HTML page.</p>
+
+    <div id="choozr"></div>
+
+    <script
+        src="https://widget.choozr.ai/6.4.1/choozr.js"
+        integrity="sha256-z/9GEGAbpnq3DkQC8eiyMKsVGC/RfmUEMXWTVjTAZSY="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        var choozr = new Choozr({
+            storeId: "demostore",
+            target: "#choozr",
+            type: "measurements",
+            onMeasurements: (measurements) => {
+                console.log(measurements);
+            }
+        });
+    </script>
+</body>
+</html>
